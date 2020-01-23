@@ -3,10 +3,23 @@
     <div id="nav">
       <router-link class="dropdown-item" to="/math">Math</router-link>
       <router-link class="dropdown-item" to="/">Memory</router-link>
+      <Toggle on="Pro" off="Easy" />
     </div>
     <router-view />
   </div>
 </template>
+
+
+<script>
+import Toggle from "./components/Toggle";
+
+export default {
+  name: "app",
+  components: {
+    Toggle
+  }   
+};
+</script>
 
 <style>
 body {

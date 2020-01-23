@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/brainwash/css/about.b021cb42.css"
   },
   {
-    "revision": "b91afd2bc6797782b616",
-    "url": "/brainwash/css/app.2d445597.css"
+    "revision": "52082d8144c48690b79f",
+    "url": "/brainwash/css/app.53950925.css"
   },
   {
     "revision": "53073b590a4e0753a3fd72befb61513c",
@@ -52,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/brainwash/img/yiiFramework.86d94249.svg"
   },
   {
-    "revision": "8d51d33e5d4e7ed4631f53618b2c7090",
+    "revision": "872f673ca65d9fea748ad97a20b4bd4b",
     "url": "/brainwash/index.html"
   },
   {
@@ -60,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/brainwash/js/about.1c5a1c0a.js"
   },
   {
-    "revision": "b91afd2bc6797782b616",
-    "url": "/brainwash/js/app.e7b807b4.js"
+    "revision": "52082d8144c48690b79f",
+    "url": "/brainwash/js/app.3beb39c3.js"
   },
   {
     "revision": "c3a78a31b9c136375aa1",
