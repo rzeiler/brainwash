@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link class="dropdown-item" to="/math">Math</router-link>
       <router-link class="dropdown-item" to="/">Memory</router-link>
+      <span class="flex-spacer" > </span>
       <Toggle on="Pro" off="Easy" />
     </div>
     <router-view />
@@ -17,7 +18,7 @@ export default {
   name: "app",
   components: {
     Toggle
-  }   
+  }
 };
 </script>
 
@@ -28,6 +29,7 @@ body {
   font-size: 14px;
   padding: 0;
   margin: 0;
+  background-color: #42b983;
 }
 a {
   text-decoration: none;
@@ -36,15 +38,28 @@ a {
 }
 #nav {
   text-align: center;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #36956a;
   padding: 10px;
+  font-size: 130%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+#nav a{
+   color: #f8f8f883;
 }
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #f8f8f8;
+
+}
+#nav .flex-spacer{
+  flex-grow: 1;
 }
 #app {
   position: relative;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   margin: auto;
 }
 

@@ -2,8 +2,6 @@
   <label class="switch">
     <input type="checkbox" v-bind:checked="checked" v-on:change="onChange($event.target.checked)" />
     <span class="slider round"></span>
-    <span class="text on">{{on}}</span>
-    <span class="text off">{{off}}</span>
   </label>
 </template>
 
@@ -32,7 +30,7 @@ export default {
     onChange(val) {
       store.appMode = val ? this.on : this.off;
     }
-  }  
+  }
 };
 </script>
 
@@ -43,6 +41,7 @@ export default {
   display: inline-block;
   width: auto;
   height: 34px;
+   user-select: none;  
 }
 
 .switch input {
@@ -58,48 +57,51 @@ export default {
   height: 100%;
   width: 60px;
   margin: 0 10px -13px 10px;
-  background-color: #7fffd4;
+  background-color: #36956a;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
 }
 
 .slider:before {
+  font-variant: small-caps;
+  font-size: 70%;
   position: absolute;
   content: "";
   height: 26px;
   width: 26px;
+  overflow: hidden;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  color: #ffffff;
+  background-color: #42b983;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
-
-.text.off {
-  display: inline-block;
-}
-.text.on {
-  display: none;
-}
+ 
+ 
 
 input:checked + .slider {
-  background-color: #dc143c;
+  background-color: #b91233;
+  
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+   background-color: #da4d69;
 }
 
-input:checked ~ .text.on {
-  display: inline-block;
+input:checked + .slider:before{
+  content: "Pro";
 }
-input:checked ~ .text.off {
-  display: none;
+input + .slider:before{
+  content: "Lite";
 }
+
+ 
 
 /* Rounded sliders */
 .slider.round {
@@ -108,5 +110,6 @@ input:checked ~ .text.off {
 
 .slider.round:before {
   border-radius: 50%;
+  line-height: 24px;
 }
 </style>

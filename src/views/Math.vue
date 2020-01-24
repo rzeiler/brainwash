@@ -2,10 +2,10 @@
   <div id="app">
     <h1 class="animated" :class="animation">{{formular}} = {{sResult}}</h1>
     <div class="btn-group">
-      <button
+      <span
         class="button"
-        v-for="r in results"
-        v-bind:key="r.result"
+        v-for="(r, index)  in results"
+        v-bind:key="index"
         v-html="r.result"
         v-bind:style="{'order':r.order}"
         v-on:click="click(r)"
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { store } from "../storePlugin";
 export default {
   name: "math",
   data: function() {
@@ -95,6 +96,13 @@ export default {
         this.results.push({ result: alt, order: 0 });
       }
 
+      if (store.appMode == "Pro") {
+        for (let index = 0; index < 2; index++) {
+          alt = eval(result + sign[index] + 1);
+          this.results.push({ result: alt, order: 0 });
+        }
+      }
+
       this.results.forEach(item => {
         let randomPos = Math.floor(Math.random() * 5);
         item.order = randomPos;
@@ -118,8 +126,8 @@ h1 {
   text-align: center;
 }
 .btn-group .button {
-  background-color: #4caf50; /* Green */
-  border: 1px solid green;
+  background-color: #4acc92; /* Green */
+  border: 1px solid #30835d;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -130,6 +138,7 @@ h1 {
   display: block;
   position: relative;
   align-items: center;
+  border-radius: 5px;
 }
 
 .btn-group {
@@ -139,9 +148,7 @@ h1 {
   flex-wrap: wrap;
 }
 
- 
-
-.btn-group .button:hover {
+/* .btn-group .button:hover {
   background-color: #3e8e41;
-}
+} */
 </style>

@@ -59,7 +59,7 @@ export default {
         "npm",
         "react"
       ];
-      
+
       if (store.appMode == "Pro") {
         svgs = [
           "angular",
@@ -84,6 +84,7 @@ export default {
           "codepen"
         ];
       }
+      
 
       for (let index = 0; index <= svgs.length - 1; index++) {
         this.key++;
@@ -95,7 +96,7 @@ export default {
           animation: "flipOut",
           order: this.key,
           key: this.key,
-          find: false
+          find: false 
         };
         items.push(item);
       }
@@ -186,9 +187,9 @@ export default {
   flex-wrap: wrap;
 }
 .memoryCard {
-  width: calc(25% - 20px);
+  width: calc(25vw - 20px);
   margin: 10px;
-  height: (33.333% - 20px);
+  height: auto;
   position: relative;
   align-items: center;
   border: 1px solid #dcd69e;
@@ -200,16 +201,16 @@ export default {
 }
 
 .memoryCard img {
-  width: 40px;
-  height: 40px;
+  width: auto;
+  height: auto;
 }
 
-@media (min-width: 361px) {
+/* @media (min-width: 361px) {
   .memoryCard img {
     width: 60px;
     height: 60px;
   }
-}
+} */
 
 button.memoryCard {
   width: calc(100% - 20px) !important;

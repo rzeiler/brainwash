@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "69b7b0099f10bf11e2fb",
-    "url": "/brainwash/css/about.b021cb42.css"
+    "revision": "99933f9be847497aabb9",
+    "url": "/brainwash/css/about.e509963b.css"
   },
   {
-    "revision": "52082d8144c48690b79f",
-    "url": "/brainwash/css/app.53950925.css"
+    "revision": "e8f7e4ea3f33f928b3fb",
+    "url": "/brainwash/css/app.6f6ec7ca.css"
   },
   {
     "revision": "53073b590a4e0753a3fd72befb61513c",
@@ -48,20 +48,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/brainwash/img/vue.c6884b94.svg"
   },
   {
-    "revision": "86d94249a4d5ae9798ad6e3b0d024ff9",
-    "url": "/brainwash/img/yiiFramework.86d94249.svg"
+    "revision": "390d1044978c88819d66d21ca2fcd3a1",
+    "url": "/brainwash/img/yiiFramework.390d1044.svg"
   },
   {
-    "revision": "872f673ca65d9fea748ad97a20b4bd4b",
+    "revision": "1e386338e2faf38f79904a867358ab02",
     "url": "/brainwash/index.html"
   },
   {
-    "revision": "69b7b0099f10bf11e2fb",
-    "url": "/brainwash/js/about.1c5a1c0a.js"
+    "revision": "99933f9be847497aabb9",
+    "url": "/brainwash/js/about.c8237e78.js"
   },
   {
-    "revision": "52082d8144c48690b79f",
-    "url": "/brainwash/js/app.3beb39c3.js"
+    "revision": "e8f7e4ea3f33f928b3fb",
+    "url": "/brainwash/js/app.4fd746b6.js"
   },
   {
     "revision": "c3a78a31b9c136375aa1",
