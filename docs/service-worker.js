@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/brainwash/precache-manifest.e29ec3fb993c822569f8fde143329562.js"
+  "/brainwash/precache-manifest.7a0885b68f90f59089a9fcd4cebd3d71.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "brainwash"});
