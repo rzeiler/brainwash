@@ -3,7 +3,7 @@
     <div id="nav">
       <router-link class="dropdown-item" to="/math">Math</router-link>
       <router-link class="dropdown-item" to="/">Memory</router-link>
-      <span class="flex-spacer" > </span>
+      <span class="flex-spacer"></span>
       <Toggle on="Pro" off="Easy" />
     </div>
     <router-view />
@@ -23,6 +23,12 @@ export default {
 </script>
 
 <style>
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -30,6 +36,12 @@ body {
   padding: 0;
   margin: 0;
   background-color: #42b983;
+  height: 100%;
+  width: 100%;
+}
+html body .container {
+  height: 100%;
+  width: 100%;
 }
 a {
   text-decoration: none;
@@ -37,30 +49,51 @@ a {
   color: #000;
 }
 #nav {
+  background-image: url("./assets/logo.png");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  z-index: 1000;
   text-align: center;
   border-bottom: 1px solid #36956a;
-  padding: 10px;
+  padding: 10px 10px 10px 65px;
   font-size: 130%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  
+  width: 100%;
+  position: absolute;
 }
-#nav a{
-   color: #f8f8f883;
+#nav a {
+  color: #fff;
+  border-bottom: 1px solid transparent;
 }
 #nav a.router-link-exact-active {
-  color: #f8f8f8;
-
+  color: #fff;
+  border-bottom-color: #ff0019;
 }
-#nav .flex-spacer{
+#nav .flex-spacer {
   flex-grow: 1;
 }
 #app {
   position: relative;
+  height: 100%;
   width: 100%;
-  max-width: 600px;
-  margin: auto;
+  padding-top: 66px;
+}
+
+/* Portrait */
+@media screen and (orientation: portrait) {
+  /* Portrait styles */
+}
+/* Landscape */
+@media screen and (orientation: landscape) {
+  /* Landscape styles */
+  /* #app {
+    max-width: 100%;
+    padding: 5px;
+    margin: 0;
+  } */
 }
 
 @keyframes flipIn {

@@ -2,7 +2,7 @@
   <div id="app">
     <div class="memoryField z-index-1 animated" :class="memoryFieldAnimation">
       <div
-        class="memoryCard animated"
+        class="memoryCard bh animated"
         :class="item.animation"
         v-bind:style="{'order':item.order}"
         v-for="(item) in items"
@@ -12,9 +12,10 @@
         <img v-if="!item.open" :src="item.backImage" alt="Aurelia" />
         <img v-else :src="item.frontImage" alt="Aurelia" />
       </div>
+      <button class="memoryCard bh z-index-0" v-on:click="start">Start</button>
+      <button class="memoryCard bh z-index-0">Klick: Current-{{clickCounter}} Best-{{clickLowes}}</button>
     </div>
-    <button class="memoryCard z-index-0" v-on:click="start">Start</button>
-    Current {{clickCounter}} Best {{clickLowes}}
+    
   </div>
 </template>
 
@@ -40,7 +41,6 @@ export default {
   created: function() {
     this.build();
   },
-
   methods: {
     build: function() {
       this.clickCounter = 0;
@@ -84,7 +84,6 @@ export default {
           "codepen"
         ];
       }
-      
 
       for (let index = 0; index <= svgs.length - 1; index++) {
         this.key++;
@@ -96,7 +95,7 @@ export default {
           animation: "flipOut",
           order: this.key,
           key: this.key,
-          find: false 
+          find: false
         };
         items.push(item);
       }
@@ -179,48 +178,59 @@ export default {
 
 .memoryField {
   width: 100%;
-  height: 100%;
-  max-width: 600px;
-  max-height: 600px;
-  margin: auto;
+  height: calc(100% - 66px);
   display: flex;
   flex-wrap: wrap;
 }
 .memoryCard {
-  width: calc(25vw - 20px);
-  margin: 10px;
   height: auto;
+  width: auto;
+  margin: 2px;
+  padding: 10px;
   position: relative;
-  align-items: center;
   border: 1px solid #dcd69e;
   background-color: #f3eca8;
-  padding: 10px;
   overflow: hidden;
-  text-align: center;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+.memoryCard.bh {
+  height: calc(33.333% - 4px + 21px);
+}
+
+/* Portrait */
+@media screen and (orientation: portrait) {
+  /* Portrait styles */
+  .memoryCard {
+    width: calc(25% - 4px);
+  }
+  .memoryCard.bh {
+    height: calc(25% - 4px + 21px);
+  }
+}
+/* Landscape */
+@media screen and (orientation: landscape) {
+  /* Landscape styles */
+  .memoryCard {
+    width: calc(16.66% - 4px);
+  }
+}
+
+button.memoryCard.bh {
+  order: 100;
+  height: 50px;
+  
+}
+button.memoryCard {
+  width: calc(50% - 4px);
+  background-color: #36956a;
+  border-color: #287251;
+  color:#fff;
 }
 
 .memoryCard img {
-  width: auto;
+  width: calc(100% - 10px);
   height: auto;
-}
-
-/* @media (min-width: 361px) {
-  .memoryCard img {
-    width: 60px;
-    height: 60px;
-  }
-} */
-
-button.memoryCard {
-  width: calc(100% - 20px) !important;
-  height: 60px;
-  display: block;
-  margin: auto;
-  border: 1px solid #dcd69e;
-  background-color: #f3eca8;
-  padding: 10px;
-  border-radius: 5px;
-  position: initial;
 }
 </style>
